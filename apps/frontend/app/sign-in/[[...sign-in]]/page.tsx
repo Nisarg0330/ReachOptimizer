@@ -1,3 +1,4 @@
+"use client";
 import { LoginForm } from '@/components/login-form'
 import { SignIn } from '@clerk/nextjs'
 import { GalleryVerticalEnd } from 'lucide-react'
