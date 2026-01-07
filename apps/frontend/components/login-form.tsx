@@ -50,7 +50,7 @@ export function LoginForm({
 
       if (result?.status === "complete") {
         await setActive({ session: result.createdSessionId })
-        router.push("/") // ← Change this to your main app route
+        router.push("/dashboard") // ← Change this to your main app route
       } else {
         setError("Login failed. Please check your credentials.")
       }
@@ -68,7 +68,7 @@ export function LoginForm({
     signIn.authenticateWithRedirect({
       strategy,
       redirectUrl: "/sso-callback",
-      redirectUrlComplete: "/",
+      redirectUrlComplete: "/dashboard",
     })
   }
 
